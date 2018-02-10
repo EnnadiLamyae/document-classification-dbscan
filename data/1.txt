@@ -1,0 +1,3 @@
+This is the first article in what will become a set of tutorials on how to carry out natural language document classification, for the purposes of sentiment analysis and, ultimately, automated trade filter or signal generation. This particular article will make use of Support Vector Machines (SVM) to classify text documents into mutually exclusive groups.
+
+Since this is the first article written in 2015, I feel it is now time to move on from Python 2.7.x and make use of the latest 3.4.x version. Hence all code in this article will be written with 3.4.x in mind.
