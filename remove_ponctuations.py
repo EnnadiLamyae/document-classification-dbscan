@@ -44,9 +44,9 @@ class remove_ponctuations:
 		length = len(array)
 		for k in range(length):
 			progr=(k+1)/length
-			in1 = 'data/'+array[k];
-			out1 = 'ponctuation_removed/'+array[k];		
-			self.remove_stop(in1,out1)
+			files_in = 'data/'+array[k]
+			files_out = 'ponctuation_removed/'+array[k];		
+			self.remove_stop(files_in,files_out)
 			#self.drawProgressBar(progr)
 		print("\nAll files done!")
 
