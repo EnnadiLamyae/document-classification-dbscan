@@ -38,6 +38,17 @@ class remove_ponctuations:
                 if noword not in self.swords:
                     open_file.write(noword)
                     open_file.write(" ")
+
+    def drawProgressBar(self,percent, barLen = 30):
+	    sys.stdout.write("\r")
+	    progress = ""
+	    for i in range(barLen):
+	        if i<int(barLen * percent):
+	            progress += "="
+	        else:
+	            progress += " "
+	    sys.stdout.write("[ %s ] %.2f%%" % (progress, percent * 100)+"\n")
+	    sys.stdout.flush()
     
     def allremove(self):	
 		array = self.files('data')						
@@ -47,7 +58,7 @@ class remove_ponctuations:
 			files_in = 'data/'+array[k]
 			files_out = 'ponctuation_removed/'+array[k];		
 			self.remove_stop(files_in,files_out)
-			#self.drawProgressBar(progr)
+			self.drawProgressBar(progr)
 		print("\nAll files done!")
 
 if __name__ == '__main__':
